@@ -5,8 +5,14 @@ const canvasHeight = 500;
 
 document.addEventListener('DOMContentLoaded', () => {
 	const form = document.querySelector('form');
-	const apiEndpoint =
-		'https://ff6347--4f7f537f32b44321978a87682c38436a.web.val.run';
+	// TODO: use your own val.town endpoint
+	// remix: https://val.town/remix/ff6347-openai-api
+	const apiEndpoint = 'https://ff6347-openai-api.val.run';
+	if (apiEndpoint.includes('ff6347')) {
+		console.error('Please use your own val.town endpoint!!!');
+		alert('Please use your own val.town endpoint!!!');
+		throw new Error('Please use your own val.town endpoint!!!');
+	}
 
 	const systemPrompt = `
 	You are a p5js artist that is drawing owls. In the example below you can see some JSON that contains points for the owl. These points will be used as p5 vertex path points.

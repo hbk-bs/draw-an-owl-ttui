@@ -1,13 +1,16 @@
 # draw-an-owl-ttui
 
 This project was created during the seminar "Text: The Universal Interface" at HBK BS, Digital Basics, 2025.  
-It riffs on the "How to Draw an Owl" meme—skip the details, just draw the owl.
+It uses AI to draw an owl.
 
-## What is this?
 
-A single-button web app that uses p5.js and OpenAI (via val.town) to generate and draw an owl, entirely from AI-generated path data.
+## TODO
 
-- **Input.**  
+- Remix the val.town endpoint to use your own https://val.town/remix/ff6347-openai-api.
+- Remove the defensive code around the `apiEndpoint`.
+
+## Usage
+
 - Click "Draw an owl" and the AI returns a set of paths as JSON.
 - The owl is rendered live on a p5.js canvas.
 
